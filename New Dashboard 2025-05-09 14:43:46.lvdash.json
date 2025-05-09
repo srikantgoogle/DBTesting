@@ -15,33 +15,37 @@
           "query" : {
             "datasetName" : "518c08dd",
             "fields" : [ {
-              "name" : "country",
-              "expression" : "`country`"
-            }, {
               "name" : "count(customerID)",
               "expression" : "COUNT(`customerID`)"
+            }, {
+              "name" : "country",
+              "expression" : "`country`"
             } ],
             "disaggregated" : false
           }
         } ],
         "spec" : {
           "version" : 3,
-          "widgetType" : "bar",
+          "widgetType" : "pie",
           "encodings" : {
-            "x" : {
+            "angle" : {
+              "fieldName" : "count(customerID)",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Count of customerID"
+            },
+            "color" : {
               "fieldName" : "country",
               "scale" : {
                 "type" : "categorical"
               },
               "displayName" : "country"
             },
-            "y" : {
-              "fieldName" : "count(customerID)",
-              "scale" : {
-                "type" : "quantitative"
-              },
-              "displayName" : "Count of customerID"
-            }
+            "extra" : [ {
+              "fieldName" : "country",
+              "displayName" : "country"
+            } ]
           },
           "frame" : {
             "title" : "Customer Distribution by Country",
