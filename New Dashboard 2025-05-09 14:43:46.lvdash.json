@@ -15,32 +15,32 @@
           "query" : {
             "datasetName" : "518c08dd",
             "fields" : [ {
-              "name" : "count(customerID)",
-              "expression" : "COUNT(`customerID`)"
-            }, {
               "name" : "country",
               "expression" : "`country`"
+            }, {
+              "name" : "count(customerID)",
+              "expression" : "COUNT(`customerID`)"
             } ],
             "disaggregated" : false
           }
         } ],
         "spec" : {
           "version" : 3,
-          "widgetType" : "pie",
+          "widgetType" : "bar",
           "encodings" : {
-            "angle" : {
-              "fieldName" : "count(customerID)",
-              "scale" : {
-                "type" : "quantitative"
-              },
-              "displayName" : "Count of customerID"
-            },
-            "color" : {
+            "x" : {
               "fieldName" : "country",
               "scale" : {
                 "type" : "categorical"
               },
               "displayName" : "country"
+            },
+            "y" : {
+              "fieldName" : "count(customerID)",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Count of customerID"
             }
           },
           "frame" : {
