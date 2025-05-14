@@ -55,6 +55,54 @@
         "width" : 6,
         "height" : 9
       }
+    }, {
+      "widget" : {
+        "name" : "31786d63",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "518c08dd",
+            "fields" : [ {
+              "name" : "count(customerID)",
+              "expression" : "COUNT(`customerID`)"
+            }, {
+              "name" : "country",
+              "expression" : "`country`"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "pie",
+          "encodings" : {
+            "angle" : {
+              "fieldName" : "count(customerID)",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Count of customerID"
+            },
+            "color" : {
+              "fieldName" : "country",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "country"
+            }
+          },
+          "frame" : {
+            "title" : "Customer Distribution by Country",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 9,
+        "width" : 6,
+        "height" : 9
+      }
     } ],
     "pageType" : "PAGE_TYPE_UNSPECIFIED"
   } ]
